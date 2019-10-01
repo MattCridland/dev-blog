@@ -1,0 +1,15 @@
+{
+	"name": "dev-blog",
+	"version": "0.1.0",
+	"private": true,
+	"description": "Matt codes and now he wants to write about it.",
+	"author": "Matt Cridland",
+	"dependencies": {
+		"metalsmith": "^2.3.0"
+	},
+	"main": "build.js",
+	"scripts": {
+		"prestart": "npm install",
+		"start": "node ."
+	}
+}

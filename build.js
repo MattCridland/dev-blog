@@ -1,4 +1,5 @@
 var metalsmith = require('metalsmith');
+var markdown = require('metalsmith-markdown');
 
 metalsmith(__dirname)
   .metadata({
@@ -8,7 +9,8 @@ metalsmith(__dirname)
 	  }
   })
 .source('./src')
-.destination('./pubic')
+.destination('./public')
+.use(markdown())
 .build(function (err) {
 	if(err) {
 		console.log(err);

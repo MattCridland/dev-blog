@@ -5,7 +5,8 @@
 	"description": "Matt codes and now he wants to write about it.",
 	"author": "Matt Cridland",
 	"dependencies": {
-		"metalsmith": "^2.3.0"
+		"metalsmith": "^2.3.0",
+		"metalsmith-markdown": "^1.2.0"
 	},
 	"main": "build.js",
 	"scripts": {

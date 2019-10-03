@@ -1,7 +1,7 @@
 ---
-title: Matt Cridland (Developer)
+title: 'Matt Cridland: Developer'
 date: 2019-10-01
-blurb: This is the main page of Matt Cridland (Developer)
+blurb: 'This is the main page of Matt Cridland: Developer'
 layout: article.hbs
 ---
 ## Matt Cridland

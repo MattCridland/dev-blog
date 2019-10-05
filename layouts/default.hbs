@@ -1,2 +1,17 @@
 <!DOCTYPE html>
-<html>{{ contents }}</html>
+<html>
+	<head></head>
+	<body>
+	
+	{{ contents }}
+	<ul>
+	{{#each collections.articles}}
+	<li>
+		<h3>{{this.title}}</h3>
+		<p>{{this.blurb}}</p>
+	</li>
+	{{/each}}
+	</ul>
+	</body>
+</html>
+

@@ -2,6 +2,7 @@ var metalsmith = require('metalsmith');
 var markdown = require('metalsmith-markdown');
 var layouts = require('metalsmith-layouts');
 var collections = require('metalsmith-collections');
+var permalinks = require('metalsmith-permalinks');
 
 metalsmith(__dirname)
   .metadata({
@@ -16,6 +17,16 @@ metalsmith(__dirname)
 	articles: 'articles/*.md'
 }))
 .use(markdown())
+.use(permalinks({
+	duplicatesFail: true,
+	linksets: [
+		{
+			match: { collection: 'articles' },
+			pattern: 'blog/:title',
+			date: 'YYYY/MM'
+		}
+        ]
+}))
 .use(layouts({
 	engine: 'handlebars',
 	directory: 'layouts',

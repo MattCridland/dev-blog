@@ -2,6 +2,7 @@
 title: 'Matt Cridland: Developer'
 date: 2019-10-01
 blurb: 'This is the main page of Matt Cridland: Developer'
+permalink: false
 ---
 ## Matt Cridland
 

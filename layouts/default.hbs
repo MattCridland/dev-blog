@@ -1,2 +1,20 @@
 <!DOCTYPE html>
-<html>{{ contents }}</html>
+<html>
+  <head></head>
+  <body>
+    <h1> {{ title }} </h1>
+    {{{ contents }}}
+    <h2>Blog Roll</h2>
+    <ul>
+    {{#each collections.articles}}
+      <li>
+        <a href="./{{path}}/">
+          <h3>{{ this.title }}</h3>
+          <p>{{ this.blurb }}</p>
+	</a>
+      </li>
+    {{/each}}
+    </ul>
+  </body>
+</html>
+

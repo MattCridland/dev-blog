@@ -3,6 +3,7 @@ var markdown = require('metalsmith-markdown');
 var layouts = require('metalsmith-layouts');
 var collections = require('metalsmith-collections');
 var permalinks = require('metalsmith-permalinks');
+var partials = require('metalsmith-discover-partials');
 
 metalsmith(__dirname)
   .metadata({
@@ -13,6 +14,10 @@ metalsmith(__dirname)
   })
 .source('./src')
 .destination('./public')
+.use(partials({
+	directory: 'layouts/partials',
+	pattern: /\.hbs$/
+}))
 .use(collections({
 	articles: 'articles/*.md'
 }))

@@ -1,0 +1,19 @@
+    <section>
+      <h2>Blog Roll</h2>
+      <nav>
+      <ul>
+      {{#each collections.articles}}
+        <li>
+          <a href="/{{ this.path }}/">
+            <h3>{{ this.title }}</h3>
+            <p>{{ this.blurb }}</p>
+          </a>
+        </li>
+      {{/each}}
+      </ul>
+      </nav>
+    </section>
+
+    <footer></footer>
+  </body>
+</html>

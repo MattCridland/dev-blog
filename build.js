@@ -4,6 +4,7 @@ var layouts = require('metalsmith-layouts');
 var collections = require('metalsmith-collections');
 var permalinks = require('metalsmith-permalinks');
 var partials = require('metalsmith-discover-partials');
+var drafts = require('metalsmith-drafts');
 
 metalsmith(__dirname)
   .metadata({
@@ -18,6 +19,7 @@ metalsmith(__dirname)
 	directory: 'layouts/partials',
 	pattern: /\.hbs$/
 }))
+.use(drafts())
 .use(collections({
 	articles: 'articles/*.md'
 }))

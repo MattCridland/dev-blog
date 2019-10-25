@@ -19,6 +19,7 @@ metalsmith(__dirname)
 .use(markdown())
 .use(permalinks({
 	duplicatesFail: true,
+	relative: 'folder',
 	linksets: [
 		{
 			match: { collection: 'articles' },
@@ -30,6 +31,7 @@ metalsmith(__dirname)
 .use(layouts({
 	engine: 'handlebars',
 	directory: 'layouts',
+	pattern: '**/*.html',
 	default: 'default.hbs'
 }))
 .build(function (err) {

@@ -10,3 +10,4 @@ permalink: false
 
 With 5 years of Professional Development experience and a Computer Science Degree from Cardiff University. *Matt Cridland* has just enough knowledge to be dangerous.
 
+<a href="/about/">Learn More</a>
